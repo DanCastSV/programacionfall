@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Routing\Controllers\Middleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
+//Route::resource('foroall', App\Http\Controllers\ForoallController::class);
+Route::resource('comunidad', App\Http\Controllers\ComunidadController::class)->middleware('auth');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');

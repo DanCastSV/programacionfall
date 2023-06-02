@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foros', function (Blueprint $table) {
+        Schema::create('foroall', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
+            $table->string('titulo', 255);
+            $table->text('contenido');
             $table->timestamps();
         });
+
+        
     }
 
     /**
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('foros');
+        Schema::dropIfExists('foroall');
     }
 };
