@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e5e7e9  ;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}"><b>
                     {{ config('Programación para todos', 'Programación para todos') }}
