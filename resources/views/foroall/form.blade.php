@@ -7,10 +7,11 @@
             {!! $errors->first('titulo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('contenido') }}
-            {{ Form::text('contenido', $foroall->contenido, ['class' => 'form-control' . ($errors->has('contenido') ? ' is-invalid' : ''), 'placeholder' => 'Contenido']) }}
-            {!! $errors->first('contenido', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+    {{ Form::label('contenido') }}
+    {{ Form::textarea('contenido', $foroall->contenido, ['class' => 'form-control' . ($errors->has('contenido') ? ' is-invalid' : ''), 'placeholder' => 'Contenido']) }}
+    {!! $errors->first('contenido', '<div class="invalid-feedback">:message</div>') !!}
+</div>
+
 
     </div>
     <div class="box-footer mt20">

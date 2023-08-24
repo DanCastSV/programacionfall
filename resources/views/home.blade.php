@@ -80,5 +80,6 @@
 
 <footer>
     <p>Programación para todos 2023.</p>
+  
 </footer>
 @endsection

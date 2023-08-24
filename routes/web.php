@@ -20,5 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 //Route::resource('foroall', App\Http\Controllers\ForoallController::class);
 Route::resource('comunidad', App\Http\Controllers\ComunidadController::class)->middleware('auth');
+//Route::resource('consultas',App\Http\Controllers\ConsultaController::class);
+Route::resource('asking', App\Http\Controllers\AskingController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
+
+Route::resource('forum', App\Http\Controllers\PostController::class);
